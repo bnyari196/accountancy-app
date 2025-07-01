@@ -13,12 +13,11 @@ const NavBar = () => {
     <nav>
 <div className="navbar bg-base-100 shadow-sm bg-rose-900">
   <div className="navbar-start">
-    <p>Mon - Sun : 8:30am - 5pm</p>
+    <p className="text-lg">Mon - Sun : 8:30am - 5pm</p>
 
   </div>
   <div className="navbar-center">
     <a className="btn btn-ghost">
-        
         <Image 
         src={Logo}
         alt= "Logo"
