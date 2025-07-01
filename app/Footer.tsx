@@ -7,12 +7,12 @@ const Footer = () => {
   return (
     <footer className="footer footer-horizontal footer-center bg-rose-900 text-primary-content p-10">
   <aside>
-  <a className="btn btn-ghost">
+  <a className="btn btn-ghost pt-6 pb-14">
         <Image 
         src={Logo}
         alt= "Logo"
-        width={50}
-        height={50}
+        width={100}
+        height={100}
         />
     </a>
     <p className="font-bold">

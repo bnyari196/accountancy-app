@@ -17,12 +17,12 @@ const NavBar = () => {
 
   </div>
   <div className="navbar-center">
-    <a className="btn btn-ghost">
+    <a className="btn btn-ghost btn-lg">
         <Image 
         src={Logo}
         alt= "Logo"
-        width={50}
-        height={50}
+        width={60}
+        height={60}
         />
     </a>
   </div>
