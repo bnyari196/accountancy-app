@@ -2,19 +2,22 @@ import React from 'react'
 
 import Image from 'next/image'
 import Logo from './tyroneTaxVat.jpg';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
     <footer className="footer footer-horizontal footer-center bg-rose-900 text-primary-content p-10">
   <aside>
-  <a className="btn btn-ghost pt-6 pb-14">
-        <Image 
-        src={Logo}
-        alt= "Logo"
-        width={100}
-        height={100}
-        />
-    </a>
+  <Link className="hover" href="/"> 
+        <div className="p-1 rounded-full transition-all duration-200 hover:ring-3 hover:ring-rose-500 hover:ring-offset-3 hover:scale-90 transform">
+            <Image 
+            src={Logo}
+            alt= "Logo"
+            width={100}
+            height={100}
+            />
+        </div>
+    </Link>
     <p className="font-bold">
       Tyrone Tax & Vat Specialists Ltd.
       <br />
