@@ -1,9 +1,7 @@
-import Link from 'next/link'
 
-import Button from './components/ Button';
 import Hero from './components/Hero';
 
-import { AiOutlineWhatsApp } from "react-icons/ai";
+/*import { AiOutlineWhatsApp } from "react-icons/ai";*/
 
 
 export default function Home() {
