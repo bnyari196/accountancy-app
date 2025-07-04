@@ -8,10 +8,8 @@ import Link from 'next/link'
 const NavBar = () => {
 
   return (
-    <nav>
-      <div className="navbar bg-stone-100 text-rose-900 shadow">
+      <div className="navbar bg-stone-100 text-rose-900 shadow md:sticky top-[40px] z-40">
         <div className="navbar-start">
-          <p className="text-lg">Mon - Sun : 8:30am - 5pm</p>
 
         </div>
         <Link className="hover" href="/"> 
@@ -29,7 +27,6 @@ const NavBar = () => {
         <Link className = "hover:text-rose-400 transition-colors" href="/contact">Contact Us</Link>
         </div>
       </div>
-    </nav>
   )
 }
 
