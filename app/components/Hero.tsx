@@ -18,8 +18,8 @@ const Hero = () => {
                 </p>
                 <button className="btn btn-primary">Book a Free Consultation</button>
             </div>
-        </div>
-</div>
+        </div>  
+    </div>
   )
 }
 
