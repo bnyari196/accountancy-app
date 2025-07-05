@@ -1,6 +1,5 @@
 import React from 'react'
 
-import { CiAlarmOn } from "react-icons/ci";
 import { TbPhoneCall } from "react-icons/tb";
 import { TfiEmail } from "react-icons/tfi";
 import { FaWhatsapp } from "react-icons/fa";
