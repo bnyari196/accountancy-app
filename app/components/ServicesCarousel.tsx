@@ -27,7 +27,7 @@ const ServicesCarousel = () => {
       {cards.map((card, index) => (
         <div
           key={index}
-          className="flex flex-col w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+          className="flex flex-col w-full max-w-sm border rounded-lg shadow-sm bg-gray-800 border-gray-700"
         >
           <img
             src={card.src}
@@ -36,10 +36,10 @@ const ServicesCarousel = () => {
           />
           <div className="flex flex-col justify-between flex-grow p-5">
             <div className="flex-grow">
-              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              <h5 className="mb-2 text-2xl font-bold tracking-tight text-white">
                 {card.title}
               </h5>
-              <p className="text-gray-700 dark:text-gray-400">
+              <p className="text-gray-400">
                 {card.description}
               </p>
             </div>
