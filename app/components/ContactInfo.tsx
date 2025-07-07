@@ -8,7 +8,7 @@ const ContactInfo = () => {
   return (
 <div className="flex flex-col md:flex-row flex-wrap p-5 justify-center items-center gap-6 text-stone-100">
   {/* Card 1 */}
-  <div className="card w-90 bg-gray-800 shadow-md card-lg">
+  <div className="card w-90 h-50 bg-gray-800 shadow-md card-lg">
     <div className="card-body">
       <h2 className="card-title justify-center"><TbPhoneCall /></h2>
       <p>Just a phone call away PagChomp</p>
@@ -17,7 +17,7 @@ const ContactInfo = () => {
   </div>
 
   {/* Card 2 */}
-  <div className="card w-90 bg-gray-800 shadow-md card-lg">
+  <div className="card w-90 h-50 bg-gray-800 shadow-md card-lg">
     <div className="card-body">
       <h2 className="card-title justify-center"> <TfiEmail /></h2>
       <p>Email us by filling out the form below</p>
@@ -26,10 +26,10 @@ const ContactInfo = () => {
   </div>
 
   {/* Card 3 */}
-  <div className="card w-90 bg-gray-800 shadow-md card-lg">
+  <div className="card w-90 h-50 bg-gray-800 shadow-md card-lg">
     <div className="card-body">
       <h2 className="card-title justify-center"><FaWhatsapp /></h2>
-      <p>More Description</p>
+      <p>Whatsapp Link</p>
     </div>
   </div>
 </div>
