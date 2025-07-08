@@ -1,20 +1,17 @@
 import React from 'react'
 
-import GoogleMaps from './GoogleMaps';
-
+import ContactFormButton from './ContacFormButton';
+import {HandleContactForm} from './HandleContactForm';
 
 const ContactForm = () => {
   return (
-<div className="flex flex-col md:flex-row p-6 gap-6 min-h-[600px]">
-  <GoogleMaps />
 
-{/* Contact Form Section - add outer div to the page itself */}
 <div className="w-full md:w-1/2 h-full">
     <div className="p-6 bg-rose-900 text-white rounded-lg shadow-md h-full flex flex-col min-h-[700px]">
-      <h2 className="text-2xl font-bold mb-4">Send us a message</h2>
+      <span className="text-2xl font-bold mb-4">Send us a message</span>
       
       {/* Form with full height and spacing */}
-      <form className="flex flex-col flex-1 space-y-4">
+      <form action={HandleContactForm} className="flex flex-col flex-1 space-y-4">
         {/* Name Field */}
         <div>
           <label className="label" htmlFor="name">
@@ -22,11 +19,12 @@ const ContactForm = () => {
           </label>
           <input
             type="text"
+            name="name"
             id="name"
             required
             minLength={3}
             maxLength={100}
-            placeholder="Enter your name"
+            placeholder="Connor Murphy"
             className="input input-bordered w-full text-black"
           />
         </div>
@@ -37,10 +35,12 @@ const ContactForm = () => {
             <span className="label-text text-white">Email Address</span>
           </label>
           <input
+            name="email"
             type="email"
             id="email"
             required
-            placeholder="Enter your email"
+            placeholder="ConnorMurphy@gmail.com"
+            pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
             className="input input-bordered w-full text-black"
           />
         </div>
@@ -51,6 +51,7 @@ const ContactForm = () => {
             <span className="label-text text-white">Your Message</span>
           </label>
           <textarea
+            name="message"
             id="message"
             required
             placeholder="Type your message here"
@@ -70,15 +71,9 @@ const ContactForm = () => {
 
 
         {/* Submit Button */}
-        <button
-          type="submit"
-          className="btn bg-white text-rose-900 hover:bg-rose-800 hover:text-white transition-all self-start"
-        >
-          Submit
-        </button>
+        <ContactFormButton />
       </form>
     </div>
-  </div>
 </div>
   )
 }

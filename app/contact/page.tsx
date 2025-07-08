@@ -1,8 +1,10 @@
 import React from 'react'
 
-import ContactInfo from '../components/ContactInfo';
-import ContactForm from '../components/ContactForm';
 import SubPageHero from '../components/SubPageHero';
+import ContactInfo from '../components/ContactInfo';
+import GoogleMaps from '../components/GoogleMaps';
+import ContactForm from '../components/ContactForm';
+
 
 const ContactPage = () => {
   return (
@@ -14,7 +16,10 @@ const ContactPage = () => {
         showButton={false}
       />
       <ContactInfo />
+      <div className="flex flex-col md:flex-row p-6 gap-6 min-h-[600px]">
+      <GoogleMaps />
       <ContactForm />
+      </div>
     </div>
   )
 }
