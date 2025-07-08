@@ -1,14 +1,27 @@
 'use server'
 
-export async function HandleContactForm(formData: FormData): Promise<void> {
-  // Simulate a delay
-  await new Promise((resolve) => setTimeout(resolve, 2000))
+import { z } from 'zod'
 
-  const name = formData.get('name') as string
-  const email = formData.get('email') as string
-  const message = formData.get('message') as string
+export async function HandleContactForm(formData: FormData) {
+  const ContactFormSchema = z.object({
+    name: z.string().min(3),
+    email: z.string().email(),
+    message: z.string().min(5).max(300),
+  })
 
-  console.log('Form data:', { name, email, message })
+  const data = {
+    name: formData.get('name'),
+    email: formData.get('email'),
+    message: formData.get('message'),
+  }
 
-  // Add actual handling logic here (e.g., send email, store in DB, etc.)
+  const result = ContactFormSchema.safeParse(data)
+
+  if (!result.success) {
+    console.error(result.error.format())
+    return
+  }
+
+  // Do something with validated result
+  console.log('Valid:', result.data)
 }

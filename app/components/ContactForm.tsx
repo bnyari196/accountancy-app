@@ -42,6 +42,7 @@ const ContactForm = () => {
             placeholder="ConnorMurphy@gmail.com"
             pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
             className="input input-bordered w-full text-black"
+            title="Please enter a valid email address"
           />
         </div>
 
@@ -63,7 +64,7 @@ const ContactForm = () => {
 
         {/* CheckBox */}
         <label className="flex items-start gap-2 w-full">
-        <input type="checkbox" className="checkbox mt-1" required />
+        <input type="checkbox" name="agreed" className="checkbox mt-1" required />
         <span className="text-white text-sm leading-snug break-words">
             By submitting your details you consent to their use in accordance with our <a href="/privacy" className="underline">Privacy Policy</a>.
         </span>
