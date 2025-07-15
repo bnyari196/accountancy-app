@@ -29,7 +29,7 @@ const ContactForm = () => {
           />
         </div>
 
-        {/* Email Field - Add general email template required */}
+        {/* Email Field */}
         <div>
           <label className="label" htmlFor="email">
             <span className="label-text text-white">Email Address</span>
@@ -46,7 +46,7 @@ const ContactForm = () => {
           />
         </div>
 
-        {/* Message Field - expands */}
+        {/* Message Field */}
         <div className="flex-1 flex flex-col">
           <label className="label" htmlFor="message">
             <span className="label-text text-white">Your Message</span>
