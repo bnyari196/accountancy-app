@@ -24,8 +24,8 @@ const NavBar = () => {
         </Link>
 
         <div className="navbar-end gap-x-5">
-        <Link className = "hover:text-rose-400 transition-colors" href="/contact">Home</Link>
-        <Link className = "hover:text-rose-400 transition-colors" href="/contact">About</Link>
+        <Link className = "hover:text-rose-400 transition-colors" href="/">Home</Link>
+        <Link className = "hover:text-rose-400 transition-colors" href="/about">About</Link>
         <Link className = "hover:text-rose-400 transition-colors" href="/contact">Contact</Link>
         </div>
       </div>
