@@ -21,7 +21,7 @@ const ContactInfo = () => {
     <div className="card-body">
       <h2 className="card-title justify-center"> <TfiEmail /></h2>
       <p>Email us by filling out the form below</p>
-      <p>Or email us at:<span className="font-semibold"> tamas.omagh2002@gmail.com</span></p>
+      <p>Or email us at:<span className="font-semibold"> tamas.nyari04@gmail.com</span></p>
     </div>
   </div>
 

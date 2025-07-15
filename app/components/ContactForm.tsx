@@ -1,7 +1,7 @@
 import React from 'react'
 
 import ContactFormButton from './ContacFormButton';
-import {HandleContactForm} from './HandleContactForm';
+import {HandleContactForm} from '../api/contact/HandleContactForm';
 
 const ContactForm = () => {
   return (
