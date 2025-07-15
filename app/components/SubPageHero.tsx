@@ -15,10 +15,10 @@ type SubPageHeroProps = {
           backgroundImage: `url(${imageUrl})`,
         }}
       >
-        <div className="hero-overlay top-0"></div>
-        <div className="hero-content text-neutral-content text-center">
+        <div className="hero-overlay"></div>
+        <div className="w-full px-4 flex items-center text-neutral-content">
           <div className="max-w-md">
-            <span className="mb-5 text-5xl font-bold">{title}</span>
+            <span className="mb-5 text-5xl font-bold block">{title}</span>
             <p className="mb-5">{subtitle}</p>
             {showButton && (
               <button className="btn btn-primary">Book a Free Consultation</button>
