@@ -21,7 +21,7 @@ type SubPageHeroProps = {
         <div className="w-full px-4 flex items-center text-neutral-content">
           <div className="max-w-md">
             <span className="mb-5 text-5xl font-bold block">
-            <BreadCrumbs/>
+            <BreadCrumbs current={title}/>
               {title}
               </span>
             <p className="mb-5">{subtitle}</p>
