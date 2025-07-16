@@ -12,7 +12,15 @@ export default function Home() {
     <Hero />
     <Services />
     <ServicesCarousel />
-    <About />
+    <About
+        title="About Our Company"
+        paragraphs={[
+          'We are a forward-thinking firm offering innovative accounting solutions.',
+          'Our team of experienced professionals is committed to helping your business grow.',
+          'Transparency, trust, and technology are at the heart of everything we do.',
+        ]}
+        imageUrl="/about-us.jpg"
+      />
     <Testimonials />
 
   </main>

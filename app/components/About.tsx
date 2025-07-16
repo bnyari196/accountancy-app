@@ -1,31 +1,37 @@
 import React from 'react'
+import Image from 'next/image'
 
-const About = () => {
+type AboutProps = {
+  title: string
+  paragraphs: string[]
+  imageUrl?: string
+}
+
+const About: React.FC<AboutProps> = ({ title, paragraphs, imageUrl = '/images/about-us.jpg' }) => {
   return (
-<div className="flex flex-col md:flex-row p-5 gap-8 text-stone-100">
-  {/* Left side - Text */}
-  <div className="w-full md:w-1/2 text-left bg-rose-900 rounded-lg p-5">
-    <h2 className="text-4xl font-bold mb-4">About Us</h2>
-    <p className="font-semibold text-lg">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ullam dolores expedita sed unde iste dolorem illo in voluptatum esse totam ipsam et possimus non fugit debitis necessitatibus, dolor cumque.
-    </p>
-    <br />
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem nulla reiciendis pariatur velit ea dolor aliquam consequuntur sit nemo rerum nobis optio, ipsam consectetur animi cumque itaque aliquid dolorem! Velit!
-    </p>
-    <br />
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda quidem adipisci deleniti, aliquam temporibus provident amet magni, natus molestiae qui porro? Iure illum nobis aperiam placeat magnam tempora quam facere.
-    </p>
-  </div>
+    <div className="w-full flex flex-col md:flex-row">
+      {/* Left side - Text with rose background */}
+      <div className="w-full md:w-1/2 bg-rose-900 text-stone-100 px-8 py-10 md:pl-5 md:pr-10">
+        <h2 className="text-4xl font-bold mb-4">{title}</h2>
+        {paragraphs.map((para, idx) => (
+          <p key={idx} className="mb-4 text-lg">
+            {para}
+          </p>
+        ))}
+      </div>
 
-  {/* Right side - Image or placeholder */}
-  <div className="w-full md:w-1/2 flex justify-center md:justify-end items-center">
-    <div className="w-full h-64 bg-gray-300 flex items-center justify-center rounded-lg">
-      <span className="text-gray-600">Image of Company</span>
+      {/* Right side - Image */}
+      <div className="md:w-1/2 flex justify-center md:justify-end items-center">
+      <div className="relative w-full h-[400px] -ml-2">
+          <Image
+            src={imageUrl}
+            alt="About"
+            fill
+            className="object-cover rounded-lg"
+          />
+        </div>
+      </div>
     </div>
-  </div>
-</div>
   )
 }
 
