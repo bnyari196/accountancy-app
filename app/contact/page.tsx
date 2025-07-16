@@ -10,7 +10,7 @@ const ContactPage = () => {
   return (
     <div>
       <SubPageHero
-        title="Get In Touch"
+        title="Contact Us"
         subtitle="Have a question or want to schedule a meeting? We'd love to hear from you."
         imageUrl="/ContactHero.jpg"
         showButton={false}
