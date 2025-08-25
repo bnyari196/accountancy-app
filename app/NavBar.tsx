@@ -59,35 +59,33 @@ const NavBar = () => {
       </div>
 
       {/* Mobile Dropdown Menu */}
-      <div className={`absolute top-full right-0 w-48 bg-stone-100 shadow-lg md:hidden z-50 rounded-bl-lg overflow-hidden transition-all duration-300 ease-in-out ${
-        isMenuOpen 
-          ? 'max-h-60 opacity-100 visible transform translate-y-0' 
-          : 'max-h-0 opacity-0 invisible transform -translate-y-2'
-      }`}>
-        <div className="py-4 space-y-2 px-4">
-          <Link 
-            className="block px-4 py-3 hover:bg-rose-100 hover:text-rose-600 transition-colors duration-200 rounded-lg transform transition-transform duration-200 hover:translate-x-1" 
-            href="/"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Home
-          </Link>
-          <Link 
-            className="block px-4 py-3 hover:bg-rose-100 hover:text-rose-600 transition-colors duration-200 rounded-lg transform transition-transform duration-200 hover:translate-x-1" 
-            href="/about"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            About
-          </Link>
-          <Link 
-            className="block px-4 py-3 hover:bg-rose-100 hover:text-rose-600 transition-colors duration-200 rounded-lg transform transition-transform duration-200 hover:translate-x-1" 
-            href="/contact"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Contact
-          </Link>
+      {isMenuOpen && (
+        <div className="absolute top-full right-0 w-48 bg-stone-100 shadow-lg md:hidden z-50 rounded-bl-lg">
+          <div className="py-4 space-y-2 px-4">
+            <Link 
+              className="block px-4 py-3 hover:bg-rose-100 hover:text-rose-600 transition-colors duration-200 rounded-lg" 
+              href="/"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Home
+            </Link>
+            <Link 
+              className="block px-4 py-3 hover:bg-rose-100 hover:text-rose-600 transition-colors duration-200 rounded-lg" 
+              href="/about"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              About
+            </Link>
+            <Link 
+              className="block px-4 py-3 hover:bg-rose-100 hover:text-rose-600 transition-colors duration-200 rounded-lg" 
+              href="/contact"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Contact
+            </Link>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   )
 }
