@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 const Hero = () => {
   return (
@@ -11,12 +12,17 @@ const Hero = () => {
         >
         <div className="hero-overlay top-0"></div>
         <div className="hero-content text-neutral-content text-center">
-            <div className="max-w-md">
-                <span className="mb-5 text-6xl font-bold">Tyrone Tax & VAT Specialists</span>
+            <div className="max-w-2xl">
+                <div className="mb-5 text-6xl font-bold">
+                    <div>Tyrone Tax & VAT</div>
+                    <div>Specialists</div>
+                </div>
                 <p className="mb-5">
                     Helping local businesses and individuals with self-assessment, VAT returns, bookkeeping and more - delivered with a personal touch.
                 </p>
-                <button className="btn btn-primary">Book a Free Consultation</button>
+                <Link href="/contact#contact-form" className="btn btn-primary">
+                  Book a Free Consultation
+                </Link>
             </div>
         </div>  
     </div>
