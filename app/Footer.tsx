@@ -99,9 +99,17 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-rose-800 mt-8 pt-8 text-center">
-          <p className="text-rose-200">
-            &copy; {new Date().getFullYear()} Tyrone Tax & VAT Specialists. All rights reserved.
-          </p>
+          <div className="flex flex-col md:flex-row items-center justify-center md:justify-between text-rose-200">
+            <p className="mb-2 md:mb-0">
+              &copy; {new Date().getFullYear()} Tyrone Tax & VAT Specialists. All rights reserved.
+            </p>
+            <Link 
+              href="/privacy-policy" 
+              className="hover:text-rose-300 transition-colors underline"
+            >
+              Privacy Policy
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
