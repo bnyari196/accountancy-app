@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Image from 'next/image'
-import Logo from './tyroneTaxVat.jpg';
+import Logo from './tyroneTaxVat.png';
 
 import Link from 'next/link'
 
@@ -25,7 +25,7 @@ const NavBar = () => {
 
         <div className="navbar-end gap-x-5">
         <Link className = "hover:text-rose-400 transition-colors" href="/">Home</Link>
-        <Link className = "hover:text-rose-400 transition-colors" href="/about">About</Link>
+        {/*<Link className = "hover:text-rose-400 transition-colors" href="/about">About</Link>*/}
         <Link className = "hover:text-rose-400 transition-colors" href="/contact">Contact</Link>
         </div>
       </div>

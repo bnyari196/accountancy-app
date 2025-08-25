@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Image from 'next/image'
-import Logo from './tyroneTaxVat.jpg';
+import Logo from './tyroneTaxVat.png';
 import Link from 'next/link';
 
 const Footer = () => {

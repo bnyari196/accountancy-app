@@ -12,9 +12,9 @@ const Hero = () => {
         <div className="hero-overlay top-0"></div>
         <div className="hero-content text-neutral-content text-center">
             <div className="max-w-md">
-                <span className="mb-5 text-5xl font-bold">Tyrone Tax & Vat Specialists</span>
+                <span className="mb-5 text-6xl font-bold">Tyrone Tax & VAT Specialists</span>
                 <p className="mb-5">
-                    Tyrone based small, friendly tax and Vat Specialist offering Free Consulations
+                    Helping local businesses and individuals with self-assessment, VAT returns, bookkeeping and more - delivered with a personal touch.
                 </p>
                 <button className="btn btn-primary">Book a Free Consultation</button>
             </div>
