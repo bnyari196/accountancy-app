@@ -10,19 +10,19 @@ import { FaWhatsapp } from "react-icons/fa";
 const Banner = () => {
   const items = [
     {
-      icon: <CiAlarmOn className="mr-2" />,
+      icon: <CiAlarmOn className="text-lg" />,
       text: 'Mon - Sun: 8:30am - 5pm',
     },
     {
-      icon: <TbPhoneCall className="mr-2" />,
+      icon: <TbPhoneCall className="text-lg" />,
       text: '074 8573 1689',
     },
     {
-      icon: <TfiEmail className="mr-2" />,
-      text: 'tamas.nyari04@gmail.com',
+      icon: <TfiEmail className="text-lg" />,
+      text: 'tyronetax@outlook.com',
     },
     {
-      icon: <FaWhatsapp className="mr-2" />,
+      icon: <FaWhatsapp className="text-lg" />,
       text: 'WhatsApp',
     },
   ];
@@ -50,7 +50,9 @@ const Banner = () => {
             className="absolute flex items-center justify-center w-full"
           >
             <span className="flex items-center justify-center text-center">
-              {items[currentIndex].icon}
+              <span className="flex items-center justify-center bg-rose-700 p-1.5 rounded-full mr-2">
+                {items[currentIndex].icon}
+              </span>
               {items[currentIndex].text}
             </span>
           </motion.div>
@@ -61,7 +63,9 @@ const Banner = () => {
       <div className="hidden md:flex items-center justify-center gap-6">
         {items.map((item, index) => (
           <span key={index} className="flex items-center">
-            {item.icon}
+            <span className="flex items-center justify-center bg-rose-700 p-1.5 rounded-full mr-2">
+              {item.icon}
+            </span>
             {item.text}
           </span>
         ))}
