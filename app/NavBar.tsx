@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Image from 'next/image'
-import Logo from './tyroneTaxVat.png';
+import Logo from './tyroneTaxVat2.png';
 
 import Link from 'next/link'
 
@@ -17,8 +17,8 @@ const NavBar = () => {
             <Image 
             src={Logo}
             alt= "Logo"
-            width={60}
-            height={60}
+            width={120}
+            height={120}
             />
         </div>
         </Link>
