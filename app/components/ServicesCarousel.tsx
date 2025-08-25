@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const ServicesCarousel = () => {
   const cards = [
@@ -37,9 +38,11 @@ const ServicesCarousel = () => {
               key={index}
               className="flex flex-col w-full border rounded-xl shadow-lg bg-white border-gray-200 hover:shadow-xl transition-shadow duration-300"
             >
-              <img
+              <Image
                 src={card.src}
                 alt={card.alt}
+                width={500}
+                height={300}
                 className="w-full h-52 object-cover rounded-t-xl"
               />
               <div className="flex flex-col justify-between flex-grow p-6">
