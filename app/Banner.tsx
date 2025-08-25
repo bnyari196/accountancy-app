@@ -12,18 +12,26 @@ const Banner = () => {
     {
       icon: <CiAlarmOn className="text-lg" />,
       text: 'Mon - Sun: 8:30am - 5pm',
+      href: null, // No link for business hours
+      clickable: false,
     },
     {
       icon: <TbPhoneCall className="text-lg" />,
       text: '074 8573 1689',
+      href: 'tel:07485731689',
+      clickable: true,
     },
     {
       icon: <TfiEmail className="text-lg" />,
       text: 'tyronetax@outlook.com',
+      href: 'mailto:tyronetax@outlook.com',
+      clickable: true,
     },
     {
       icon: <FaWhatsapp className="text-lg" />,
       text: 'WhatsApp',
+      href: 'https://wa.me/447485731689', // Replace with your actual WhatsApp number
+      clickable: true,
     },
   ];
 
@@ -35,6 +43,42 @@ const Banner = () => {
     }, 4000);
     return () => clearInterval(timer);
   }, [items.length]);
+
+  interface BannerItemProps {
+    item: {
+      icon: React.ReactNode;
+      text: string;
+      href: string | null;
+      clickable: boolean;
+    };
+    className?: string;
+  }
+
+  const BannerItem = ({ item, className = "" }: BannerItemProps) => {
+    const content = (
+      <span className={`flex items-center ${item.clickable ? 'hover:text-rose-200 transition-colors duration-200 cursor-pointer' : ''} ${className}`}>
+        <span className="flex items-center justify-center bg-rose-700 p-1.5 rounded-full mr-2">
+          {item.icon}
+        </span>
+        {item.text}
+      </span>
+    );
+
+    if (item.clickable && item.href) {
+      return (
+        <a 
+          href={item.href}
+          target={item.href.startsWith('https') ? '_blank' : '_self'}
+          rel={item.href.startsWith('https') ? 'noopener noreferrer' : undefined}
+          className="block"
+        >
+          {content}
+        </a>
+      );
+    }
+
+    return content;
+  };
 
   return (
     <div className="p-2 bg-rose-900 text-white overflow-hidden md:sticky top-0 z-50">
@@ -49,12 +93,10 @@ const Banner = () => {
             transition={{ duration: 0.5 }}
             className="absolute flex items-center justify-center w-full"
           >
-            <span className="flex items-center justify-center text-center">
-              <span className="flex items-center justify-center bg-rose-700 p-1.5 rounded-full mr-2">
-                {items[currentIndex].icon}
-              </span>
-              {items[currentIndex].text}
-            </span>
+            <BannerItem 
+              item={items[currentIndex]} 
+              className="text-center justify-center w-full"
+            />
           </motion.div>
         </AnimatePresence>
       </div>
@@ -62,12 +104,7 @@ const Banner = () => {
       {/* Desktop view (static items) */}
       <div className="hidden md:flex items-center justify-center gap-6">
         {items.map((item, index) => (
-          <span key={index} className="flex items-center">
-            <span className="flex items-center justify-center bg-rose-700 p-1.5 rounded-full mr-2">
-              {item.icon}
-            </span>
-            {item.text}
-          </span>
+          <BannerItem key={index} item={item} />
         ))}
       </div>
     </div>
