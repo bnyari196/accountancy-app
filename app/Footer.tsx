@@ -84,13 +84,15 @@ const Footer = () => {
               >
                 <FaLinkedin className="w-5 h-5" />
               </a>
-              <a 
-                href="#" 
+                <a 
+                href="https://wa.me/447485731689" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-2 bg-rose-800 rounded-full hover:bg-rose-700 transition-colors"
                 aria-label="WhatsApp"
-              >
+                >
                 <FaWhatsapp className="w-5 h-5" />
-              </a>
+                </a>
             </div>
           </div>
         </div>
