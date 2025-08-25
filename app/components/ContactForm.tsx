@@ -66,7 +66,7 @@ const ContactForm = () => {
         <label className="flex items-start gap-2 w-full">
         <input type="checkbox" name="agreed" className="checkbox mt-1" required />
         <span className="text-white text-sm leading-snug break-words">
-            By submitting your details you consent to their use in accordance with our <a href="/privacy" className="underline">Privacy Policy</a>.
+            By submitting your details you consent to their use in accordance with our <a href="/privacy-policy" className="underline">Privacy Policy</a>.
         </span>
         </label>
 
