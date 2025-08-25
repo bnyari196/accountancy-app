@@ -17,8 +17,8 @@ const Footer = () => {
                 <Image 
                   src={Logo}
                   alt="Tyrone Tax & VAT Specialists Logo"
-                  width={120}
-                  height={120}
+                  width={200}
+                  height={200}
                   className="mx-auto md:mx-0"
                 />
               </div>
