@@ -13,7 +13,7 @@ const Hero = () => {
         <div className="hero-overlay top-0"></div>
         <div className="hero-content text-neutral-content text-center">
             <div className="max-w-2xl">
-                <div className="mb-5 text-6xl font-bold">
+            <div className="mb-5 text-4xl md:text-6xl font-bold">
                     <div>Tyrone Tax & VAT</div>
                     <div>Specialists</div>
                 </div>
