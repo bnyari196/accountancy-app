@@ -62,6 +62,11 @@ const Footer = () => {
                 </Link>
               </div>
               <div>
+                <Link href="/about" className="hover:text-rose-300 transition-colors block">
+                  About Us
+                </Link>
+              </div>
+              <div>
                 <Link href="/contact" className="hover:text-rose-300 transition-colors block">
                   Contact Us
                 </Link>
