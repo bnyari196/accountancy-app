@@ -28,7 +28,7 @@ const NavBar = () => {
       </div>
 
       {/* Desktop Navigation */}
-      <div className="navbar-end gap-x-5 hidden md:flex">
+      <div className="navbar-end gap-x-5 hidden md:flex mr-6">
         <Link className="relative font-medium hover:text-rose-600 transition-colors duration-200 group" href="/">
           Home
           <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-rose-600 transition-all duration-300 group-hover:w-full"></span>
