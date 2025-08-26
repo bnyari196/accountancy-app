@@ -12,17 +12,19 @@ const Footer = () => {
           
           {/* Company Info */}
           <div className="text-center md:text-left">
-            <Link href="/" className="inline-block mb-4">
-              <div className="transition-all duration-200 hover:scale-105 transform">
-                <Image 
-                  src={Logo}
-                  alt="Tyrone Tax & VAT Specialists Logo"
-                  width={200}
-                  height={200}
-                  className="mx-auto md:mx-0"
-                />
-              </div>
-            </Link>
+            <div className="-mt-6">
+              <Link href="/" className="inline-block mb-4">
+                <div className="transition-all duration-200 hover:scale-105 transform">
+                  <Image 
+                    src={Logo}
+                    alt="Tyrone Tax & VAT Specialists Logo"
+                    width={200}
+                    height={200}
+                    className="mx-auto md:mx-0"
+                  />
+                </div>
+              </Link>
+            </div>
           </div>
 
           {/* Contact Information */}
