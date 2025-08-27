@@ -12,7 +12,7 @@ type SubPageHeroProps = {
   const SubPageHero = ({ title, subtitle, imageUrl, showButton = false }: SubPageHeroProps) => {
     return (
       <div
-        className="hero min-h-screen bg-cover bg-center m-0 p-0"
+        className="hero h-[70vh] md:h-[85vh] lg:h-[85vh] bg-cover bg-center m-0 p-0"
         style={{
           backgroundImage: `url(${imageUrl})`,
         }}
@@ -35,4 +35,4 @@ type SubPageHeroProps = {
   };
   
   export default SubPageHero;
-  
+
