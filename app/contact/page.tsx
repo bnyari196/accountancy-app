@@ -19,9 +19,11 @@ const ContactPage = () => {
       <div id="contact-form">
       {/* Anchor for direct linking to the contact form */}
       </div>
-      <div className="flex flex-col md:flex-row p-6 gap-6 min-h-[600px]">
-      <GoogleMaps />
-      <ContactForm />
+      <div className="px-2 md:px-6"> {/* Even less horizontal padding on mobile */}
+        <div className="flex flex-col lg:flex-row gap-4 md:gap-6 min-h-[350px] md:min-h-[600px]">
+          <GoogleMaps />
+          <ContactForm />
+        </div>
       </div>
     </div>
   )
