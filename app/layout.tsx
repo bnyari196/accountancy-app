@@ -73,8 +73,45 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "AccountingService",
+    "name": "Tyrone Tax & VAT Specialists",
+    "description": "Professional accounting services for individuals and small businesses across Tyrone and surrounding areas.",
+    "url": "https://tyronetax.co.uk",
+    "telephone": "+44-7485-731689",
+    "email": "tyronetax@outlook.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Omagh",
+      "addressRegion": "County Tyrone",
+      "addressCountry": "GB"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "54.5973",
+      "longitude": "-7.3086"
+    },
+    "openingHours": "Mo-Su 08:30-17:00",
+    "serviceArea": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": "54.5973",
+        "longitude": "-7.3086"
+      },
+      "geoRadius": "50000"
+    }
+  }
+
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
