@@ -6,11 +6,10 @@ const Hero = () => {
     <div
         className="hero h-[70vh] md:h-[85vh] lg:h-[85vh] bg-cover bg-center m-0 p-0"
         style={{
-            backgroundImage:
-            "url(/Omagh.jpg)",
+            backgroundImage: "url(/Omagh.jpg)",
         }}
         >
-        <div className="hero-overlay top-0"></div>
+        <div className="hero-overlay bg-opacity-40"></div>
         <div className="hero-content text-neutral-content text-center">
             <div className="max-w-2xl">
             <div className="mb-5 text-4xl md:text-6xl font-bold">
