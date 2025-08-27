@@ -4,7 +4,7 @@ import Link from 'next/link'
 const Hero = () => {
   return (
     <div
-        className="hero min-h-screen bg-cover bg-center m-0 p-0"
+        className="hero h-[70vh] md:h-[85vh] lg:h-[85vh] bg-cover bg-center m-0 p-0"
         style={{
             backgroundImage:
             "url(/Omagh.jpg)",
