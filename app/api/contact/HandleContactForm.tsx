@@ -40,7 +40,6 @@ export async function HandleContactForm(formData: FormData): Promise<void> {
   
   try {
     await transporter.sendMail(mailOptions)
-    // No return value; just resolve to void
   } catch (error) {
     console.error('Error sending email:', error)
     throw new Error('Failed to send email')
