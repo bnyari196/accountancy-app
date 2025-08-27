@@ -7,19 +7,19 @@ import { FaLinkedin, FaWhatsapp, FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock } 
 const Footer = () => {
   return (
     <footer className="bg-rose-900 text-white">
-      <div className="container mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="container mx-auto px-6 py-8"> 
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6"> 
           
           {/* Company Info */}
           <div className="text-center md:text-left">
-            <div className="-mt-6">
-              <Link href="/" className="inline-block mb-4">
+            <div className="-mt-4"> 
+              <Link href="/" className="inline-block mb-3"> 
                 <div className="transition-all duration-200 hover:scale-105 transform">
                   <Image 
                     src={Logo}
                     alt="Tyrone Tax & VAT Specialists Logo"
-                    width={200}
-                    height={200}
+                    width={180}
+                    height={180} 
                     className="mx-auto md:mx-0"
                   />
                 </div>
@@ -29,8 +29,10 @@ const Footer = () => {
 
           {/* Contact Information */}
           <div className="text-center md:text-left">
-            <h4 className="text-lg font-semibold mb-4">Contact Information</h4>
-            <div className="space-y-3">
+            <h4 className="text-lg font-semibold mb-3"> 
+              Contact Information
+            </h4>
+            <div className="space-y-2"> 
               <div className="flex items-center justify-center md:justify-start">
                 <FaPhone className="text-rose-300 mr-3" />
                 <a href="tel:07485731689" className="hover:text-rose-300 transition-colors">
@@ -56,8 +58,10 @@ const Footer = () => {
 
           {/* Quick Links & Social */}
           <div className="text-center md:text-left">
-            <h4 className="text-lg font-semibold mb-4">Connect With Us</h4>
-            <div className="space-y-3 mb-6">
+            <h4 className="text-lg font-semibold mb-3"> 
+              Connect With Us
+            </h4>
+            <div className="space-y-2 mb-4">
               <div>
                 <Link href="/" className="hover:text-rose-300 transition-colors block">
                   Home
@@ -105,7 +109,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-rose-800 mt-8 pt-8 text-center">
+        <div className="border-t border-rose-800 mt-6 pt-6 text-center"> 
           <div className="flex flex-col md:flex-row items-center justify-center md:justify-between text-rose-200">
             <p className="mb-2 md:mb-0">
               &copy; {new Date().getFullYear()} Tyrone Tax & VAT Specialists. All rights reserved.
