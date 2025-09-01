@@ -21,7 +21,7 @@ const Footer = () => {
                     width={180}
                     height={180} 
                     className="mx-auto md:mx-0"
-                    priority={false}
+                    loading="lazy"
                     quality={90}
                   />
                 </div>
