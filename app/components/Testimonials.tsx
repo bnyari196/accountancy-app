@@ -12,7 +12,7 @@ const testimonials = [
     {
       name: "Michael K.",
       role: "Local VAT Registered Sole Trader",
-      text: "Thomas has been tremendous help keeping me on the straight and narrow with my books. He's always quick to respond to any questions and has made the whole process much easier than it was before.",
+      text: "Thomas has been tremendous help keeping me on the straight and narrow with my books. He's always very quick to respond to any questions and has made the whole process much easier than it was previously.",
     },
     // Add more testimonials as needed
 ];
